@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PuskesmasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PuskesmasController::class, 'home']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [PuskesmasController::class, 'login']);
+
+Route::get('/register', [PuskesmasController::class, 'register']);
+
+Route::get('/doc', [PuskesmasController::class, 'doc']);
+
+Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
+
+Route::get('/docrm', [PuskesmasController::class, 'docrm']);
+
+Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
+
+Route::get('/doclogin', [PuskesmasController::class, 'doclogin']);
+
+Route::get('/docregister', [PuskesmasController::class, 'docregister']);

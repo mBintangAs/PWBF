@@ -47,7 +47,7 @@
 								</div>
 	            </div>
 	          </form>
-	          <p class="text-center">Belum memiliki akun? <a data-toggle="tab" href="#signup">Daftar</a></p>
+	          <p class="text-center">Belum memiliki akun? <a href="/register">Daftar</a></p>
 	          </div>
 		      </div>
 				</div>
