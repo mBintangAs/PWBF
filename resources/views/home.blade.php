@@ -35,7 +35,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">PendaftaranPasien</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
