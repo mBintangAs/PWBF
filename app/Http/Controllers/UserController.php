@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -9,10 +10,9 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $valid =  $request->validate([
-            'name' => 'required',
             'email' => 'email:dns|unique:users|required',
+            'username' => 'username:dns|unique:users|required',
             'password' => 'min:8|required',
-            'No_Telepon' =>'numeric|required',
             'password_confirmation' => 'min:8|required|same:password'
 
         ]);
@@ -21,7 +21,6 @@ class UserController extends Controller
         return view('auth.login', [
             'registberhasil' => 'true',
             'email' => $valid['email'],
-            'title' => 'dr. Reynaldi - Specialist Penyakit Cinta'
 
         ]);
     }

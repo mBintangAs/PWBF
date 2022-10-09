@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 10</title>
+  	<title>SIGN UP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,22 +17,21 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login</h2>
+					<h2 class="heading-section">SIGN UP</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-		      	<h3 class="mb-4 text-center">Have an account?</h3>
 		      	<form action="#" class="signin-form">
 		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Email" required>
+		      			<input type="text" name="email" class="form-control" placeholder="Email" required>
 		      		</div>
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required>
+                        <input type="text" name="username"class="form-control" placeholder="Username" required>
                     </div>
 	            <div class="form-group">
-	              <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+	              <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>
 	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	            </div>
 	            <div class="form-group">
@@ -40,17 +39,9 @@
 	            </div>
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
-		            	<label class="checkbox-wrap checkbox-primary">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-									</label>
-								</div>
-								<div class="w-50 text-md-right">
-									<a href="#" style="color: #fff">Forgot Password</a>
 								</div>
 	            </div>
 	          </form>
-	          <p class="text-center">Belum memiliki akun? <a data-toggle="tab" href="#signup">Daftar</a></p>
 	          </div>
 		      </div>
 				</div>
