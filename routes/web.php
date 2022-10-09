@@ -16,18 +16,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PuskesmasController::class, 'home']);
 
-Route::get('/login', [PuskesmasController::class, 'login']);
+Route::get('/login', [PuskesmasController::class, 'login'])->name('login-patient');
 
 Route::get('/register', [PuskesmasController::class, 'register']);
 
-Route::get('/doc', [PuskesmasController::class, 'doc']);
-
-Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
-
-Route::get('/docrm', [PuskesmasController::class, 'docrm']);
-
-Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
-
-Route::get('/doclogin', [PuskesmasController::class, 'doclogin']);
+Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('guest')->name('login-doctor');
+Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
+route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
+Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
+
+Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
+    
+});
+Route::group(['middleware' => ['authad', 'ceklevelad:1']], function () {
+    route::get('/ad',[PuskesmasController::class, 'ad']);
+
+});
+Route::group(['middleware' => ['authdoc', 'cekleveldoc:2']], function () {
+    Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
+    Route::get('/docrm', [PuskesmasController::class, 'docrm']);
+    Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
+    Route::get('/doc', [PuskesmasController::class, 'doc']);
+    route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
+
+});

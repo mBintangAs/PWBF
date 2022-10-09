@@ -70,8 +70,10 @@
 
             <li>
               <a class="dropdown-item d-flex align-items-center" href="/docprofile">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
+                <div class="btn">
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </div>
               </a>
             </li>
 
@@ -80,10 +82,13 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="/doclogin">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
+              <form class="dropdown-item d-flex align-items-center" method="POST" action="/doclogout">
+                @csrf
+                <button class="btn" type="submit">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </button>
+              </form>
             </li>
 
           </ul><!-- End Profile Dropdown Items -->

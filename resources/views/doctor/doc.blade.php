@@ -30,58 +30,29 @@
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">Hari</th>
-                      <th scope="col">Jam</th>
-                      <th scope="col">Start Date</th>
+                      <th scope="col">Jam Masuk</th>
+                      <th scope="col">Jam Pulang</th>
+                      <th scope="col">Tanggal</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody>@php $no = 1 @endphp
+                    @foreach($jadwal as $item)
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Senin</td>
-                      <td>Designer</td>
-                      <td>2016-05-25</td>
+                      <th scope="row">{{ $no++ }}</th>
+                      <td>{{ $item->hari }}</td>
+                      <td>{{ date('H : i',strtotime($item->jam_masuk)) }}</td>
+                      <td>{{ date('H : i',strtotime($item->jam_pulang)) }}</td>
+                      <td>{{ date('d F Y', strtotime($item->tanggal))}}</td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Selasa</td>
-                      <td>Developer</td>
-                      <td>2014-12-05</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Rabu</td>
-                      <td>Finance</td>
-                      <td>2011-08-12</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Kamis</td>
-                      <td>HR</td>
-                      <td>2012-06-11</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Jumat</td>
-                      <td>Dynamic Division Officer</td>
-                      <td>2011-04-19</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Sabtu</td>
-                      <td>Dynamic Division Officer</td>
-                      <td>2011-04-19</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Minggu</td>
-                      <td>Dynamic Division Officer</td>
-                      <td>2011-04-19</td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               <!-- End Table with stripped rows --><!-- End Reports -->
          
 
+        </div>
+        <div class="card-footer">
+          {{ $jadwal->links() }}
         </div>
       </div><!-- End Left side columns -->
 

@@ -67,7 +67,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form method="POST" action="/doclogin" class="row g-3 needs-validation" novalidate>
+                  <form method="POST" action="/adlogin" class="row g-3 needs-validation" novalidate>
                     @csrf
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
