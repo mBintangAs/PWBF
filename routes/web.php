@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PuskesmasController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ Route::get('/', [PuskesmasController::class, 'home']);
 Route::get('/login', [PuskesmasController::class, 'login'])->name('login-patient');
 
 Route::get('/register', [PuskesmasController::class, 'register']);
+Route::post('/register2', [userController::class, "register"]);
 
 Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('guest')->name('login-doctor');
 Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');

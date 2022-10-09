@@ -23,7 +23,8 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-		      	<form action="#" class="signin-form">
+		      	<form action="/register2" method="POST" class="signin-form">
+					@csrf
 		      		<div class="form-group">
 		      			<input type="text" name="email" class="form-control" placeholder="Email" required>
 		      		</div>
