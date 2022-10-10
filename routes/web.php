@@ -30,7 +30,11 @@ Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 route::get('/ad',[PuskesmasController::class, 'ad']);
 
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
-
+Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
+    Route::get('/docrm', [PuskesmasController::class, 'docrm']);
+    Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
+    Route::get('/doc', [PuskesmasController::class, 'doc']);
+    route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
 // Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
     
 // });
@@ -40,10 +44,6 @@ Route::get('/docregister', [PuskesmasController::class, 'docregister']);
 // });
 
 Route::group(['middleware' => ['authdoc', 'cekleveldoc:2']], function () {
-    Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
-    Route::get('/docrm', [PuskesmasController::class, 'docrm']);
-    Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
-    Route::get('/doc', [PuskesmasController::class, 'doc']);
-    route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
+    
 
 });

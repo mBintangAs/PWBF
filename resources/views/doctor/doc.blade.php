@@ -35,7 +35,9 @@
                       <th scope="col">Tanggal</th>
                     </tr>
                   </thead>
-                  <tbody>@php $no = 1 @endphp
+
+                  <tbody>
+                    {{-- @php $no = 1 @endphp
                     @foreach($jadwal as $item)
                     <tr>
                       <th scope="row">{{ $no++ }}</th>
@@ -44,7 +46,21 @@
                       <td>{{ date('H : i',strtotime($item->jam_pulang)) }}</td>
                       <td>{{ date('d F Y', strtotime($item->tanggal))}}</td>
                     </tr>
-                    @endforeach
+                    @endforeach --}} 
+                    <tr>
+                      <td>hallo</td>
+                      <td>hallo</td>
+                      <td>hallo</td>
+                      <td>hallo</td>
+                      <td>hallo</td>
+                    </tr>
+                    <tr>
+                      <th>hello</th>
+                      <th>hello</th>
+                      <th>hello</th>
+                      <th>hello</th>
+                      <th>hello</th>
+                    </tr>
                   </tbody>
                 </table>
               <!-- End Table with stripped rows --><!-- End Reports -->
@@ -52,7 +68,7 @@
 
         </div>
         <div class="card-footer">
-          {{ $jadwal->links() }}
+          {{-- {{ $jadwal->links() }} --}}
         </div>
       </div><!-- End Left side columns -->
 
