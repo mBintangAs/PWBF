@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PuskesmasController::class, 'home']);
 
-Route::get('/login', [PuskesmasController::class, 'login'])->name('login-patient');
+Route::get('/login', [PuskesmasController::class, 'login']);
+Route::get('/login2', [LoginController::class, 'login']);
 
 Route::get('/register', [PuskesmasController::class, 'register']);
 Route::post('/register2', [userController::class, "register"]);

@@ -16,7 +16,6 @@ class PuskesmasController extends Controller
             'artikel'=> $artikel,
         ]);
     }
-
     public function login() {
         return view('login');
     }

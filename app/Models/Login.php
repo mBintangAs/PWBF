@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class reservasi extends Model
+class Login extends Model
 {
     use HasFactory;
-
-    
+    protected $fillable=[
+        'username',
+        'password'
+    ];
 }
