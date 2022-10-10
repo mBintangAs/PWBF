@@ -27,16 +27,18 @@ Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('g
 Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
 route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
 Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
+route::get('/ad',[PuskesmasController::class, 'ad']);
 
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
 
-Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
+// Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
     
-});
-Route::group(['middleware' => ['authad', 'ceklevelad:1']], function () {
-    route::get('/ad',[PuskesmasController::class, 'ad']);
+// });
+// Route::group(['middleware' => ['authad', 'ceklevelad:1']], function () {
+    
 
-});
+// });
+
 Route::group(['middleware' => ['authdoc', 'cekleveldoc:2']], function () {
     Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docrm', [PuskesmasController::class, 'docrm']);
