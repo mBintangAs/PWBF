@@ -59,6 +59,7 @@
   
                 <!-- Multi Columns Form -->
                 <form class="row g-3">
+                
                   <div class="col-md-12">
                     <label for="inputName5" class="form-label">Nama Obat</label>
                     <input type="text" class="form-control" id="inputName5">
@@ -66,7 +67,7 @@
                   <div class="col-md-6">
                       <div class="d-flex justify-content-between">
                          <div>
-                            <p class="text-dark">Jumlah</p>
+                            <p class="text-dark">Total Obat</p>
                          </div>
                          <div class="input-group w-auto">
                             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
@@ -85,7 +86,7 @@
                     <div class="col-md-6">
                       <div class="d-flex justify-content-between">
                          <div>
-                            <p class="text-dark">Jumlah</p>
+                            <p class="text-dark">Aturan Pakai</p>
                          </div>
                          <div class="input-group w-auto">
                             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
@@ -101,7 +102,7 @@
                     <div class="col-md-6">
                       <div class="d-flex justify-content-between">
                          <div>
-                            <p class="text-dark">Jumlah</p>
+                            <p class="text-dark">Anjuran Meminum Obat</p>
                          </div>
                          <div class="input-group w-auto">
                             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
