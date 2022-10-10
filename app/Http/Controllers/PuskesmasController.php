@@ -38,6 +38,7 @@ class PuskesmasController extends Controller
         return view('doctor/docrm');
     }
 
+
     public function docjadwal () {
         return view('doctor/docjadwal');
     }

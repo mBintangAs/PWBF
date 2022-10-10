@@ -51,13 +51,7 @@
                 <a href="/home" class="logo d-flex align-items-center w-auto">
                 </a>
               </div><!-- End Logo -->
-              @if (session('salah'))
-                  
-              <div class="alert alert-danger alert-dismissible fade show" role="alert">
-               {{ session('salah') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-              @endif
+
               <div class="card mb-3">
 
                 <div class="card-body">
@@ -67,13 +61,13 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  {{-- <form method="POST" action="/doclogin" class="row g-3 needs-validation" novalidate> --}}
-                    @csrf
+                  <form class="row g-3 needs-validation" novalidate>
+
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="email" value="{{ session('email') }}" class="form-control" id="yourUsername" required>
+                        <input type="text" name="username" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Please enter your username.</div>
                       </div>
                     </div>
@@ -91,7 +85,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <a href="doc" class="btn btn-primary w-100" type="submit">Login</button>
+                      <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="/docregister">Create an account</a></p>
@@ -101,12 +95,6 @@
                 </div>
               </div>
 
-              <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-              </div>
 
             </div>
           </div>
