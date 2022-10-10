@@ -2,19 +2,28 @@
 @section('content')
 @include('admin.partial.sidebarad')
 
+<div class="row">
 <div class="col-lg-6 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Jadwal Dokter</h4>
-        <div class="form-group">
-          <label for="exampleInputPassword4">Puskesmas</label>
-          <input type="password" class="form-control" id="exampleInputPassword4">
-        </div>
+        <h4 class="card-title">Jadwal Praktek Dokter</h4>
+        <label for="exampleInputPassword4">POLI</label>
+      <select class="form-control" style="border-radius: 30px">
+        <option>Umum</option>
+        <option>Gigi</option>
+        <option>KIA</option>
+        <option>Lansia</option>
+        <option>Psikologi</option>
+        <option>Gizi</option>
+        <option>Batra</option>
+        <option>Anak</option>
+    </select>
+
         <table class="table">
           <thead>
             <tr>
               <th>DOKTER</th>
-              <th>POLI</th>
+              <th>PUKUL</th>
               <th>HARI/TANGGAL</th>
               <th>STATUS</th>
             </tr>
@@ -22,31 +31,31 @@
           <tbody>
             <tr>
               <td>Jacob</td>
-              <td>Umum</td>
+              <td>10.00</td>
               <td>12 May 2017</td>
               <td><label class="badge badge-danger">Pending</label></td>
             </tr>
             <tr>
               <td>Messsy</td>
-              <td>Mata</td>
+              <td>11.00</td>
               <td>15 May 2017</td>
               <td><label class="badge badge-warning">In progress</label></td>
             </tr>
             <tr>
               <td>John</td>
-              <td>Gigi</td>
+              <td>12.00</td>
               <td>14 May 2017</td>
               <td><label class="badge badge-info">Fixed</label></td>
             </tr>
             <tr>
               <td>Peter</td>
-              <td>Kandungan</td>
+              <td>13.00</td>
               <td>16 May 2017</td>
               <td><label class="badge badge-success">Completed</label></td>
             </tr>
             <tr>
               <td>Dave</td>
-              <td>Penyakit Dalam</td>
+              <td>14.00</td>
               <td>20 May 2017</td>
               <td><label class="badge badge-warning">In progress</label></td>
             </tr>
@@ -61,16 +70,24 @@
 <div class="col-lg-6 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Jadwal Kontrol</h4>
-        <div class="form-group">
-          <label for="exampleInputPassword4">Puskesmas</label>
-          <input type="password" class="form-control" id="exampleInputPassword4">
-        </div>
+        <h4 class="card-title">Jadwal Kontrol Pasien</h4>
+       <label for="exampleInputPassword4">POLI</label>
+      <select class="form-control" style="border-radius: 30px">
+        <option>Umum</option>
+        <option>Gigi</option>
+        <option>KIA</option>
+        <option>Lansia</option>
+        <option>Psikologi</option>
+        <option>Gizi</option>
+        <option>Batra</option>
+        <option>Anak</option>
+    </select>
+
         <table class="table table-hover">
           <thead>
             <tr>
               <th>PASIEN</th>
-              <th>POLI</th>
+              <th>JAM</th>
               <th>HARI/TANGGAL</th>
               <th>Status</th>
             </tr>
@@ -78,31 +95,31 @@
           <tbody>
             <tr>
               <td>Jacob</td>
-              <td>Umum</td>
+              <td>10.00</td>
               <td class="text-danger"> 16 May 2019 <i class="mdi mdi-arrow-down"></i></td>
               <td><label class="badge badge-danger">Pending</label></td>
             </tr>
             <tr>
               <td>Messsy</td>
-              <td>Gigi</td>
+              <td>11.00</td>
               <td class="text-danger"> 17 May 2019<i class="mdi mdi-arrow-down"></i></td>
               <td><label class="badge badge-warning">In progress</label></td>
             </tr>
             <tr>
               <td>John</td>
-              <td>Kandungan</td>
+              <td>12.00</td>
               <td class="text-danger"> 18 May 2019 <i class="mdi mdi-arrow-down"></i></td>
               <td><label class="badge badge-info">Fixed</label></td>
             </tr>
             <tr>
               <td>Peter</td>
-              <td>Mata</td>
+              <td>13.00</td>
               <td class="text-success">19 May 2019 <i class="mdi mdi-arrow-up"></i></td>
               <td><label class="badge badge-success">Completed</label></td>
             </tr>
             <tr>
               <td>Dave</td>
-              <td>Penyakit Dalam </td>
+              <td>14.00 </td>
               <td class="text-success"> 20 May 2019 <i class="mdi mdi-arrow-up"></i></td>
               <td><label class="badge badge-warning">In progress</label></td>
             </tr>
@@ -111,6 +128,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <div class="card">
     <div class="card-body">
@@ -141,8 +159,8 @@
         </thead>
         <tbody>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-1.png" alt="image">
+            <td>
+            Herman Beck 
             </td>
             <td>
               Herman Beck
@@ -160,8 +178,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-2.png" alt="image">
+            <td>
+              Messy Adam
             </td>
             <td>
               Messsy Adam
@@ -179,8 +197,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-3.png" alt="image">
+            <td>
+             John Richards
             </td>
             <td>
               John Richards
@@ -198,8 +216,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-4.png" alt="image">
+            <td>
+             Peter Pan
             </td>
             <td>
               Peter Meggik
@@ -217,8 +235,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-1.png" alt="image">
+            <td>
+              Edward
             </td>
             <td>
               Edward
@@ -236,8 +254,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-2.png" alt="image">
+            <td>
+             John Doe
             </td>
             <td>
               John Doe
@@ -255,8 +273,8 @@
             </td>
           </tr>
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces-clipart/pic-3.png" alt="image">
+            <td>
+             Henry Lau
             </td>
             <td>
               Henry Tom
