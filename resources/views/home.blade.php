@@ -48,36 +48,13 @@
                 </div>
                 <form action="">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500">HARI</span>
-                            <select class="form-control" style="border-radius: 30px">
-                                <option>Senin</option>
-                                <option>Selasa</option>
-                                <option>Rabu</option>
-                                <option>Kamis</option>
-                                <option>Jum'at</option>
-                                <option>Sabtu</option>
-                                <option>Minggu</option>
-                            </select>
-                            <span class="select-arrow"></span>
+                    <div class="col-md-5">
+                        <label for="inputDate" class="form-label"style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
+                        <div class="col-sm-15">
+                          <input type="date" class="form-control"style="border-radius: 30px">
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500">TANGGAL</span>
-                            <input class="form-control" id="name" type="text" style="border-radius: 30px" placeholder="Tanggal" data-sb-validations="required" />
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif">BULAN</span>
-                            <input class="form-control" id="name" type="text" style="border-radius: 30px" placeholder="Bulan" data-sb-validations="required" />
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
+                      </div>
+                    <div class="col-md-5">
                         <div class="form-group">
                             <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif">POLI KLINIK</span>
                             <select class="form-control" style="border-radius: 30px">
@@ -103,6 +80,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
@@ -111,55 +89,99 @@
                     <h3 class="section-subheading text-muted">Artikel Terpopuler</h3>
                 </div>
                 <div class="row">
-                    @foreach ($artikel as $item)
-                        
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal{{ $item->id }}">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="{{ $item->path }}" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/a1.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">{{ $item->title }}</div>
+                                <div class="portfolio-caption-heading">Dampak Self-Diagnose Terhadap Kesehatan Mental</div>
+                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-modal modal fade" id="portfolioModal{{ $item->id}}" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <div class="modal-body">
-                                                <!-- Project details-->
-                                                <h2 class="text-uppercase">{{  $item->title  }}</h2>
-                                                <img class="img-fluid d-block mx-auto" src="{{ $item->path }}" alt="..." />
-                                                <p>{{ $item->excerpt }}</p>
-                                                <ul class="list-inline">
-                                                </ul>
-                                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                                    <i class=""></i>
-                                                    Baca
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
+                                <img class="img-fluid" src="assets/img/portfolio/a2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">5 Perilaku Hidup Bersih dan Sehat yang Mudah Dilakukan</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                    <nav class="d-lg-flex justify-content-lg-end me-5 dataTables_paginate paging_simple_numbers">
-                        <ul class="pagination">
-                            {{ $artikel->links() }}
-                        </ul>
-                    </nav>
-                   
-                </section>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/a3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Vaksinasi di Bulan Ramdhan? Batalkah Puasa?</div>
+                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/a4.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ibu, Ini Penyebab Umum Muntaber pada Anak</div>
+                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/a5.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lebih Baik Makan Sebelum Olahraga atau Sesudah?</div>
+                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/a6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">17 Makanan untuk Radang Tenggorokan yang Direkomendasikan</div>
+                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
