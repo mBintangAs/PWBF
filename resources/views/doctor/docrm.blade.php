@@ -53,7 +53,7 @@
                       </div>
 
                     <div class="text-center">
-                      <a href="/docform"><button type="submit" class="btn btn-primary">Cari</button></a>
+                      <a href="/docrmform"><button type="submit" class="btn btn-primary">Cari</button></a>
                     </div>
                     <!-- End Pencarian berdasarkan nama form  -->
 
