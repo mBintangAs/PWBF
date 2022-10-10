@@ -35,6 +35,8 @@ Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
     Route::get('/doc', [PuskesmasController::class, 'doc']);
     route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
+Route::get('/input-data',[PuskesmasController::class, 'InputData']);
+Route::get('/rekam-medis',[PuskesmasController::class, 'rekammedis']);
 // Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
     
 // });
