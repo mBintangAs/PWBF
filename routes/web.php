@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PuskesmasController::class, 'home']);
 
 Route::get('/login', [PuskesmasController::class, 'login']);
-Route::get('/login2', [LoginController::class, 'login']);
+Route::post('/login2', [LoginController::class, 'login']);
 
 Route::get('/register', [PuskesmasController::class, 'register']);
 Route::post('/register2', [userController::class, "register"]);
@@ -27,25 +27,24 @@ Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('g
 Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
 route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
 Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
-route::get('/ad',[PuskesmasController::class, 'ad']);
 
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
-Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
+
+Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
+    
+});
+Route::group(['middleware' => ['authad', 'ceklevelad:1']], function () {
+    route::get('/ad',[PuskesmasController::class, 'ad']);
+    
+});
+
+Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
+
+Route::group(['middleware' => ['authdoc', 'cekleveldoc:2']], function () {
+    Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docrm', [PuskesmasController::class, 'docrm']);
     Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
     Route::get('/doc', [PuskesmasController::class, 'doc']);
     route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
-Route::get('/input-data',[PuskesmasController::class, 'InputData']);
-Route::get('/rekam-medis',[PuskesmasController::class, 'rekammedis']);
-// Route::group(['middleware' => ['auth', 'ceklevel:0']], function () {
-    
-// });
-// Route::group(['middleware' => ['authad', 'ceklevelad:1']], function () {
-    
-
-// });
-
-Route::group(['middleware' => ['authdoc', 'cekleveldoc:2']], function () {
-    
 
 });
