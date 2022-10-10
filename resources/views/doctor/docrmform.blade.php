@@ -43,10 +43,9 @@
                   </div>
                 </div>
 
-                <div class="row mb-3">
-                  <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                  </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
 
               </form><!-- End General Form Elements -->
@@ -200,10 +199,9 @@
                       <textarea class="form-control" style="height: 100px"></textarea>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
                   </div>
   
                 </form><!-- End General Form Elements -->
@@ -234,10 +232,9 @@
                       <textarea class="form-control" style="height: 100px"></textarea>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
                   </div>
   
                 </form><!-- End General Form Elements -->
