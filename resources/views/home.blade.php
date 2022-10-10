@@ -48,42 +48,13 @@
                 </div>
                 <form action="">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500">PROVINSI</span>
-                            <select class="form-control" style="border-radius: 30px">
-                                <option style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Jawa Timur</option>
-                                <option style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Jawa Barat</option>
-                                <option style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Jawa Tengah</option>
-                            </select>
-                            <span class="select-arrow"></span>
+                    <div class="col-md-5">
+                        <label for="inputDate" class="form-label"style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
+                        <div class="col-sm-15">
+                          <input type="date" class="form-control"style="border-radius: 30px">
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500">KOTA/KABUPATEN</span>
-                            <select class="form-control" style="border-radius: 30px">
-                                <option>Kabupaten Bojonegoro</option>
-                                <option>Kabupaten Gresik</option>
-                                <option>Kabupaten Lamongan</option>
-                                <option>Kabupaten Sidoarjo</option>
-                                <option>Kota Surabaya</option>
-                            </select>
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif">KECAMATAN</span>
-                            <select name="kecamatan" class="form-control" style="border-radius: 30px">
-                                <option value="gub">Kecamatan Gubeng</option>
-                                <option value="tmbk">Kecamatan Tambaksari</option>
-                                <option>Kecamatan Rungkut</option>
-                            </select>
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
+                    <div class="col-md-5">
                         <div class="form-group">
                             <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif">POLI KLINIK</span>
                             <select class="form-control" style="border-radius: 30px">
