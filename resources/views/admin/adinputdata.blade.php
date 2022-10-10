@@ -3,10 +3,8 @@
 @include('admin.partial.sidebarad')
 <div class="container-fluid">
 
-  <div class="card">
-    
-  </div>
-</div>
+<div class="row">
+
 
 <div class="col-md-6 grid-margin stretch-card">
   <div class="card">
@@ -56,7 +54,8 @@
   </div>
 </div>
 
-<div class="card-body">
+<div class="card shadow col-md-6 grid-margin stretch-card">
+  <div class="card-body">
   <h4 class="card-title">Edit Data Dokter</h4>
   <label for="exampleInputPassword4">POLI</label>
       <select class="form-control" style="border-radius: 30px">
@@ -71,11 +70,11 @@
     </select>
  
   <form class="forms-sample">
-    <div class="form-group">
+    <div class="mt-3 form-group">
       <label for="exampleInputName1">ID Dokter</label>
       <input type="text" class="form-control" id="exampleInputName1">
     </div>
-    <div class="form-group">
+    <div class="mt-3 form-group">
       <label for="exampleInputEmail3">Nama Dokter</label>
       <input type="email" class="form-control" id="exampleInputEmail3">
     </div>
@@ -100,4 +99,6 @@
   </form>
 </div>
 
+</div>
+</div>
 @endsection

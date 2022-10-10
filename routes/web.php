@@ -35,4 +35,6 @@ Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
     route::get('/ad',[PuskesmasController::class, 'ad']);
     Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
+    Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
+    Route::get('/input-data',[PuskesmasController::class,'InputData']);
 
