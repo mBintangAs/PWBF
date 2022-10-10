@@ -58,6 +58,13 @@ class PuskesmasController extends Controller
   {
     return view('admin/addash');
   }
+  public function InputData (){
+    return view('admin/adinputdata');
+  }
+  public function rekammedis()
+  {
+    return view('admin/adrekam');
+  }
     public function adloginpost (Request $request) {
         $email = $request['email'];
         $password = $request['password'];

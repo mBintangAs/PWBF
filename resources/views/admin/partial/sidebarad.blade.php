@@ -24,7 +24,7 @@
                   <span>Dashboard</span></a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="/reservasi">
+              <a class="nav-link" href="/input-data">
                   <i class="fa-solid fa-calendar"></i>
                   <span>Input Data </span></a>
           </li>
