@@ -25,10 +25,8 @@ class PuskesmasController extends Controller
     }
 
     public function doc() {
-        $jadwal = DoctorSchedule::where('doctor_id',Auth::user()->id)->paginate(7);
-        return view('doctor/doc',[
-            'jadwal'=>$jadwal
-        ]);
+        // $jadwal = DoctorSchedule::where('doctor_id',Auth::user()->id)->paginate(7);
+        return view('doctor/doc');
     }
 
     

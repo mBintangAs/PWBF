@@ -1,183 +1,170 @@
-<!--Main Navigation-->
-<header>
-  <!-- Sidebar -->
-  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-    <div class="position-sticky">
-      <div class="list-group list-group-flush mx-3 mt-4">
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-            <i class="bi bi-list-columns"> </i>Main dashboard
-        </a>
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Input Data</span>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Rekam Medis</span>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Rekap Pasien</span>
-          </a>
-      </div>
-    </div>
-  </nav>
-  <!-- Sidebar -->
+<body id="page-top">
 
-  <!-- Navbar -->
-  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#sidebarMenu"
-        aria-controls="sidebarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav  sidebar sidebar-dark accordion" style="background-color: rgb(16, 112, 236)" id="accordionSidebar">
 
-      <!-- Brand -->
-      <a class="navbar-brand" href="#">
-       <img src="assets/img/logos/microsoft.svg">ISHEC
-      </a>
-      <!-- Search form -->
+          <!-- Sidebar - Brand -->
+          <a class="sidebar-brand d-flex align-items-center justify-content-center">
+              <div class="sidebar-brand-icon">
+                {{-- logo taruh sini --}}
+                  <img src="img/logo.png" alt="" width="40">
+              </div>
+              <div class="sidebar-brand-text mx-3">ISHEC</div>
+          </a>
 
-      <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
-        <!-- Notification dropdown -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bell"></i>
-            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
 
-        <!-- Icon -->
-        <li class="nav-item">
-          <a class="nav-link me-3 me-lg-0" href="#">
-            <i class="fas fa-fill-drip"></i>
-          </a>
-        </li>
-        <!-- Icon -->
-        <li class="nav-item me-3 me-lg-0">
-          <a class="nav-link" href="#">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
+          <!-- Nav Item - Dashboard -->
+          <li class="nav-item">
+              <a class="nav-link" href="/dashboard">
+                  <i class="fa-solid fa-gauge"></i>
+                  <span>Dashboard</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/reservasi">
+                  <i class="fa-solid fa-calendar"></i>
+                  <span>Input Data </span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/rekam-medis">
+                  <i class="fa-solid fa-notes-medical"></i>
+                  <span>Rekam Medis</span></a>
+          </li>
 
-        <!-- Icon dropdown -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="flag-united-kingdom flag m-0"></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" href="#"
-                ><i class="flag-united-kingdom flag"></i>English
-                <i class="fa fa-check text-success ms-2"></i
-              ></a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-            </li>
-          </ul>
-        </li>
+          <!-- Divider -->
+          <hr class="sidebar-divider">
 
-        <!-- Avatar -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-              class="rounded-circle"
-              height="22"
-              alt="Avatar"
-              loading="lazy"
-            />
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">My profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Logout</a>
-            </li>
-          </ul>
-        </li>
+          <!-- Heading -->
+          {{-- <div class="sidebar-heading">
+              {{ __('Settings') }}
+          </div>
+   --}}
+          <!-- Nav Item - Profile -->
+          {{-- <li class="nav-item">
+              <a class="nav-link" href="/profile">
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>{{ __('Profile') }}</span>
+              </a>
+          </li> --}}
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa-solid fa-circle-arrow-left"></i>
+              <span>Halaman Awal</span></a>
+          </li>
+
+
+
+          <!-- Divider -->
+
+          <!-- Sidebar Toggler (Sidebar) -->
+        
+
       </ul>
-    </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-</header>
-<!--Main Navigation-->
+      <!-- End of Sidebar -->
 
-<!--Main layout-->
-<main style="margin-top: 58px;">
-  <div class="container pt-4"></div>
-</main>
-<!--Main layout-->
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+          <!-- Main Content -->
+          <div id="content">
+
+              <!-- Topbar -->
+              <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                  <!-- Sidebar Toggle (Topbar) -->
+                  <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                      <i class="fa fa-bars"></i>
+                  </button>
+
+                  <!-- Topbar Search -->
+                  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                      <div class="input-group">
+                          <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <button class="btn btn-primary" type="button">
+                                  <i class="fas fa-search fa-sm"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+
+                  <!-- Topbar Navbar -->
+                  <ul class="navbar-nav ml-auto">
+
+                      <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                      <li class="nav-item dropdown no-arrow d-sm-none">
+                          <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-search fa-fw"></i>
+                          </a>
+                          <!-- Dropdown - Messages -->
+                          <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                              <form class="form-inline mr-auto w-100 navbar-search">
+                                  <div class="input-group">
+                                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                      <div class="input-group-append">
+                                          <button class="btn btn-primary" type="button">
+                                              <i class="fas fa-search fa-sm"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </li>
+
+
+                      <!-- Nav Item - User Information -->
+                      <li class="nav-item dropdown no-arrow">
+                          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ strtoupper('shab') }}</span>
+                              <figure class="img-profile rounded-circle avatar font-weight-bold" data-initial="{{ strtoupper('S') }}"></figure>
+                          </a>
+                          <!-- Dropdown - User Information -->
+                          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                              <a class="dropdown-item" href="/profile">
+                                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Profil
+                              </a>
+                              {{-- <a class="dropdown-item" href="javascript:void(0)">
+                                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  {{ __('Settings') }}
+                              </a> --}}
+                              {{-- <a class="dropdown-item" href="javascript:void(0)">
+                                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  {{ __('Activity Log') }}
+                              </a> --}}
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  {{ __('Logout') }}
+                              </a>
+                          </div>
+                      </li>
+
+                  </ul>
+
+  
+              </nav>
+              <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">'Mau Keluar?'</h5>
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">Pilih "Logout" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
+                          <div class="modal-footer">
+                              <button class="btn btn-link" type="button" data-dismiss="modal">{{ __('Batal') }}</button>
+                              <a class="btn btn-danger" href='/logout' onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                              <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                                  @csrf
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
