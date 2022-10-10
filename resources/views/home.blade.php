@@ -46,7 +46,6 @@
                     <h2 class="section-heading text-uppercase">Pendaftaran Pasien</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
-                <form action="">
                 <div class="row">
                     <div class="col-md-5">
                         <label for="inputDate" class="form-label"style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
@@ -76,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-                </form>
                 </div>
             </div>
         </section>

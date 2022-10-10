@@ -33,6 +33,10 @@ class PuskesmasController extends Controller
     public function docprofile() {
         return view('doctor/docprofile');
     }
+
+    public function docrmfom() {
+        return view('doctor/docrmform');
+    }
     
     public function docrm() {
         return view('doctor/docrm');

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
     public function login(Request $request) {
-        if($request->isMethod('post')){
+        if($request->isMethod('get')){
             Login::create([
                 'username'=>$request->username,
                 'password'=>Hash::make($request['password']),
