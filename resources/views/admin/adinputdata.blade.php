@@ -24,8 +24,10 @@
      
       <form class="forms-sample">
         <div class="form-group">
+          <div class="mt-3 form-group">
           <label for="exampleInputName1">ID Pasien</label>
           <input type="text" class="form-control" id="exampleInputName1">
+          </div>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Nama Pasien</label>
@@ -36,7 +38,7 @@
           <input type="password" class="form-control" id="exampleInputPassword4">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword4">Jenis Kelamis</label>
+          <label for="exampleInputPassword4">Jenis Kelamin</label>
           <input type="password" class="form-control" id="exampleInputPassword4">
         </div>
         <div class="form-group">
@@ -91,7 +93,7 @@
       <input type="password" class="form-control" id="exampleInputPassword4">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword4">Asal Puskesmas</label>
+      <label for="exampleInputPassword4">Spesialis</label>
       <input type="password" class="form-control" id="exampleInputPassword4">
     </div>
     <button type="submit" class="btn btn-success mr-2">Submit</button>
