@@ -19,7 +19,7 @@
 
           <!-- Nav Item - Dashboard -->
           <li class="nav-item">
-              <a class="nav-link" href="/dashboard">
+              <a class="nav-link" href="/ad">
                   <i class="fa-solid fa-gauge"></i>
                   <span>Dashboard</span></a>
           </li>
