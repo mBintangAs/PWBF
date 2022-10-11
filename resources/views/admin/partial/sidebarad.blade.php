@@ -3,7 +3,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
       <!-- Sidebar -->
-      <ul class="navbar-nav  sidebar sidebar-dark accordion" style="background-color: rgb(16, 112, 236)" id="accordionSidebar">
+      <ul class="navbar-nav  sidebar sidebar-dark accordion bg-primary" id="accordionSidebar">
 
           <!-- Sidebar - Brand -->
           <a class="sidebar-brand d-flex align-items-center justify-content-center">
