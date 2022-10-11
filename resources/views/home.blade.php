@@ -99,7 +99,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Dampak Self-Diagnose Terhadap Kesehatan Mental</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">5 Perilaku Hidup Bersih dan Sehat yang Mudah Dilakukan</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Vaksinasi di Bulan Ramdhan? Batalkah Puasa?</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Ibu, Ini Penyebab Umum Muntaber pada Anak</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Lebih Baik Makan Sebelum Olahraga atau Sesudah?</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">17 Makanan untuk Radang Tenggorokan yang Direkomendasikan</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>

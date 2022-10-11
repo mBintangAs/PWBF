@@ -78,7 +78,6 @@
                    </div>
                   <div class="col-md-6">
                       <select id="inputState" class="form-select">
-                        <option selected>Jenis Obat</option>
                         <option value="1">Botol</option>
                         <option value="2">Butir</option>
                       </select>
