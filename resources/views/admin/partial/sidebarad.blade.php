@@ -117,37 +117,23 @@
 
 
                       <!-- Nav Item - User Information -->
-                      <ul class="d-flex align-items-center">
-{{-- 
-                        <li class="nav-item dropdown pe-3"> --}}
-{{--                 
-                          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="d-none d-md-block dropdown-toggle ps-2">Shab</span>
-                          </a><!-- End Profile Iamge Icon --> --}}
-{{--                                 
-                            <li>
-                              <hr class="dropdown-divider">
-                            </li>
-                 --}}
-                            <li>
-                              <form class="dropdown-item d-flex align-items-center" method="POST" action="/doclogout">
-                                <input type="hidden" name="_token" value="BHorG8JeFIp01CHH1jA4bxChSTUK81Vq281jl3sd"><button class="btn" type="submit">
-                                  <i class="bi bi-box-arrow-right"></i>
-                                  <span>Sign Out</span>
-                                </button>
-                              </form>
-                            </li>
-                
-                          </ul><!-- End Profile Dropdown Items -->
-                        </li><!-- End Profile Nav -->
-                
-                      
+                      <li class="nav-item dropdown no-arrow">
+                          {{-- <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> --}}
+                              {{-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ strtoupper('shab') }}</span>
+                              <figure class="img-profile rounded-circle avatar font-weight-bold" data-initial="{{ strtoupper('S') }}"></figure> --}}
+                          {{-- </a> --}}
                           <!-- Dropdown - User Information -->
-                          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                              <a class="dropdown-item" href="/profile">
+                          {{-- <form method="POST" action="/adlogin" class="row g-3 needs-validation" novalidate> --}}
+                            {{-- <input type="hidden" name="_token" value="rLysDUPbH0bDhVVZ1vQYxq2uDxZ5jlZmnAq0UmJ1">                <button class="btn" type="submit"> --}}
+                              <a href="/adlogin" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i>
+                              <span>Sign Out</span></a>
+                            </button>
+                          </form>
+                          {{-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown"> --}}
+                              {{-- <a class="dropdown-item" href="/profile">
                                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                   Profil
-                              </a>
+                              </a> --}}
                               {{-- <a class="dropdown-item" href="javascript:void(0)">
                                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                   {{ __('Settings') }}
@@ -156,12 +142,12 @@
                                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                   {{ __('Activity Log') }}
                               </a> --}}
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                              {{-- <div class="dropdown-divider"></div> --}}
+                              {{-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                   {{ __('Logout') }}
-                              </a>
-                          </div>
+                              </a> --}}
+                          {{-- </div> --}}
                       </li>
 
                   </ul>
