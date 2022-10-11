@@ -11,7 +11,7 @@
     <div class="card-body">
       <h4 class="card-title">Edit Data Pasien</h4>
       <label for="exampleInputPassword4">POLI</label>
-      <select class="form-control" style="border-radius: 30px">
+      <select class="form-control">
         <option>Umum</option>
         <option>Gigi</option>
         <option>KIA</option>
@@ -60,7 +60,7 @@
   <div class="card-body">
   <h4 class="card-title">Edit Data Dokter</h4>
   <label for="exampleInputPassword4">POLI</label>
-      <select class="form-control" style="border-radius: 30px">
+      <select class="form-control">
         <option>Umum</option>
         <option>Gigi</option>
         <option>KIA</option>

@@ -8,7 +8,7 @@
       <div class="card-body">
         <h4 class="card-title">Jadwal Praktek Dokter</h4>
         <label for="exampleInputPassword4">POLI</label>
-      <select class="form-control" style="border-radius: 30px">
+      <select class="form-control">
         <option>Umum</option>
         <option>Gigi</option>
         <option>KIA</option>
@@ -72,7 +72,7 @@
       <div class="card-body">
         <h4 class="card-title">Jadwal Kontrol Pasien</h4>
        <label for="exampleInputPassword4">POLI</label>
-      <select class="form-control" style="border-radius: 30px">
+      <select class="form-control">
         <option>Umum</option>
         <option>Gigi</option>
         <option>KIA</option>
@@ -134,9 +134,17 @@
     <div class="card-body">
       <h4 class="card-title">Riwayat Rekam Medis</h4>
       <h6 class="card-title">Kondisi Umum</h6>
-      <div class="form-group">
-        <input type="password" class="form-control" id="exampleInputPassword4">
-      </div>
+      <label for="exampleInputPassword4">POLI</label>
+      <select class="form-control">
+        <option>Umum</option>
+        <option>Gigi</option>
+        <option>KIA</option>
+        <option>Lansia</option>
+        <option>Psikologi</option>
+        <option>Gizi</option>
+        <option>Batra</option>
+        <option>Anak</option>
+    </select>
       <table class="table table-striped">
         <thead>
           <tr>
