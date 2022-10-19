@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('artikels', function (Blueprint $table) {
+        Schema::create('rekam_medis', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('excerpt');
-            $table->text('body');
-            $table->timestamp('published_at')->nullable();
+            $table->string('diagnosis');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikels');
+        Schema::dropIfExists('rekam_medis');
     }
 };

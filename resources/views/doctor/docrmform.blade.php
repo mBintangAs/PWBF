@@ -20,6 +20,66 @@
 
           <div class="card">
             <div class="card-body">
+              <h5 class="card-title">Obat</h5>
+
+              <!-- Multi Columns Form -->
+              <form class="row g-3">
+              
+                <div class="row">
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">Sistol/Diastol</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">/</p>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">mm/Hg</p>
+                  </div>
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">TB/BB</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">/</p>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">mm/Hg</p>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">Denyut Nadi</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">/</p>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">kali/menit</p>
+                  </div>
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">Suhu</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">°C</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">Respirasi</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">per menit</p>
+                  </div>
+                  <div class="col">
+                    <label for="inputName5" class="col-sm-3 form-label">Lingkar Perut</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
+                    <p class="d-inline">cm</p>
+                  </div>
+                </div>
+      
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form><!-- End Multi Columns Form -->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
               <h5 class="card-title">Diagnosis</h5>
 
               <!-- General Form Elements -->
