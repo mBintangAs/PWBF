@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('rekam_medis', function (Blueprint $table) {
             $table->id();
-            $table->string('diagnosis');
+            $table->integer('sistol');
+            $table->integer('diastol');
+            $table->integer('TB');
+            $table->integer('BB');
+            $table->integer('Denyut_nadi');
+            $table->integer('Respirasi');
+            $table->decimal('Suhu', $precision = 3, $scale = 1);
+            $table->integer('Lingkar_perut')->nullable();
             $table->timestamps();
         });
     }

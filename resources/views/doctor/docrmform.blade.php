@@ -20,7 +20,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Obat</h5>
+              <h5 class="card-title">Kondisi Umum</h5>
 
               <!-- Multi Columns Form -->
               <form class="row g-3">
@@ -45,8 +45,6 @@
                 <div class="row">
                   <div class="col">
                     <label for="inputName5" class="col-sm-3 form-label">Denyut Nadi</label>
-                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
-                    <p class="d-inline">/</p>
                     <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
                     <p class="d-inline">kali/menit</p>
                   </div>

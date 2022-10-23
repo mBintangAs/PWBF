@@ -27,6 +27,7 @@ Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('gue
 route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
 Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 
+Route::get('/adartikel', [PuskesmasController::class, 'adartikel']);
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
 Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docrm', [PuskesmasController::class, 'docrm']);

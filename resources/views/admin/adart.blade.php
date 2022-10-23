@@ -336,6 +336,7 @@
   <!-- Custom js for this page-->
   <script src="../../js/chart.js"></script>
   <!-- End custom js for this page-->
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
 </body>
 
 </html>
