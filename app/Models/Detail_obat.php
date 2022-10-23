@@ -5,11 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Obat extends Model
+class Detail_obat extends Model
 {
     use HasFactory;
-
-    public function detail_obat(){
-        return $this->hasMany(detail_obat::class);
-    }
 }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Diagnosis extends Model
 {
     use HasFactory;
+
+    public function detail_obat(){
+        return $this->hasMany(detail_obat::class);
+    }
+
 }
