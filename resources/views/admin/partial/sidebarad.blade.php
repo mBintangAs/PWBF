@@ -33,6 +33,7 @@
                   <i class="fa-solid fa-notes-medical"></i>
                   <span>Rekam Medis</span></a>
           </li>
+      
 
           <!-- Divider -->
           <hr class="sidebar-divider">

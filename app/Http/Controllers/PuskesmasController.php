@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\DoctorSchedule;
+use App\Models\RekamMedis;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -70,7 +71,10 @@ class PuskesmasController extends Controller
   }
   public function rekammedis()
   {
-    return view('admin/adrekam');
+    $RekamMedis=RekamMedis::with('user')->get();
+    return view('admin/adrekam',[
+        "RekamMedis"=>$RekamMedis
+    ]);
   }
     public function adloginpost (Request $request) {
         $email = $request['email'];

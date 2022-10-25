@@ -14,4 +14,4 @@ class DoctorSchedule extends Model
     {
         return $this->hasOne(User::class);
     }
-}
+} 

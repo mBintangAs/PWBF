@@ -17,38 +17,34 @@ class UserSeeder extends Seeder
     {
         //
         User::create([
-            'name'=>'admin',
-            'email'=>'admin@admin.com',
+            'email'=>'patient@admin.com',
             'password'=> bcrypt('123456'),
-            'No_Telepon' => '0812345678',
-            'JK'=>'0',
-            'tgl_lahir'=>'2022-10-01',
-            'alamat'=>'jl aja jadian enggak',
-            'level'=> '1'
+            'username'=> 'shab'
+
         ]);
-        User::create([
-            'name'=>'patient',
-            'email'=>'patient@patient.com',
-            'password'=> bcrypt('123456'),
-            'No_Telepon' => '0812345678',
-            'JK'=>'0',
-            'tgl_lahir'=>'2022-10-01',
-            'alamat'=>'jl aja jadian enggak',
-            'level'=> '0',
-            'nik'=>'123456789101112',
-            'no_bpjs'=>'12345678',
-        ]);
-        User::create([
-            'name'=>'doctor',
-            'email'=>'doctor@doctor.com',
-            'password'=> bcrypt('123456'),
-            'No_Telepon' => '0812345678',
-            'JK'=>'0',
-            'tgl_lahir'=>'2022-10-01',
-            'alamat'=>'jl aja jadian enggak',
-            'level'=> '2',
-            'no_str'=>'12345678',
-            'profesi'=>'Dokter Cinta'
-        ]);
+        // User::create([
+        //     'name'=>'patient',
+        //     'email'=>'patient@patient.com',
+        //     'password'=> bcrypt('123456'),
+        //     'No_Telepon' => '0812345678',
+        //     'JK'=>'0',
+        //     'tgl_lahir'=>'2022-10-01',
+        //     'alamat'=>'jl aja jadian enggak',
+        //     'level'=> '0',
+        //     'nik'=>'123456789101112',
+        //     'no_bpjs'=>'12345678',
+        // ]);
+        // User::create([
+        //     'name'=>'doctor',
+        //     'email'=>'doctor@doctor.com',
+        //     'password'=> bcrypt('123456'),
+        //     'No_Telepon' => '0812345678',
+        //     'JK'=>'0',
+        //     'tgl_lahir'=>'2022-10-01',
+        //     'alamat'=>'jl aja jadian enggak',
+        //     'level'=> '2',
+        //     'no_str'=>'12345678',
+        //     'profesi'=>'Dokter Cinta'
+        // ]);
     }
 }

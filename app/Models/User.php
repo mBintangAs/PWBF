@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use app\Models\RekamMedis;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,6 +19,10 @@ class User extends Model
         'email',
         'password'
     ];
+    public function RekamMedis()
+    {
+        return $this->hasMany(RekamMedis::class);
+    }
     // /**
     //  * The attributes that are mass assignable.
     //  *
