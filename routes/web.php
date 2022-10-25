@@ -39,6 +39,7 @@ Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
     Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
     Route::get('/input-data',[PuskesmasController::class,'InputData']);
+    Route::get('/formad',[PuskesmasController::class,'Formad']);
 
 route::get('/doc',[DoctorScheduleController::class, 'index']);
 

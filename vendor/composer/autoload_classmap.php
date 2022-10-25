@@ -8,10 +8,13 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
     'App\\Http\\Controllers\\ArtikelController' => $baseDir . '/app/Http/Controllers/ArtikelController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+
     'App\\Http\\Controllers\\DetailDiagnosisController' => $baseDir . '/app/Http/Controllers/DetailDiagnosisController.php',
     'App\\Http\\Controllers\\DetailJadwalController' => $baseDir . '/app/Http/Controllers/DetailJadwalController.php',
+
     'App\\Http\\Controllers\\DetailObatController' => $baseDir . '/app/Http/Controllers/DetailObatController.php',
     'App\\Http\\Controllers\\DiagnosisController' => $baseDir . '/app/Http/Controllers/DiagnosisController.php',
     'App\\Http\\Controllers\\DocrmController' => $baseDir . '/app/Http/Controllers/DocrmController.php',
@@ -48,17 +51,21 @@ return array(
     'App\\Http\\Requests\\StoreObatRequest' => $baseDir . '/app/Http/Requests/StoreObatRequest.php',
     'App\\Http\\Requests\\StoreRekamMedisRequest' => $baseDir . '/app/Http/Requests/StoreRekamMedisRequest.php',
     'App\\Http\\Requests\\StoreTindakanRequest' => $baseDir . '/app/Http/Requests/StoreTindakanRequest.php',
+    'App\\Http\\Requests\\StoreadminRequest' => $baseDir . '/app/Http/Requests/StoreadminRequest.php',
     'App\\Http\\Requests\\StoreloginRequest' => $baseDir . '/app/Http/Requests/StoreloginRequest.php',
     'App\\Http\\Requests\\StorereservasiRequest' => $baseDir . '/app/Http/Requests/StorereservasiRequest.php',
     'App\\Http\\Requests\\UpdateArtikelRequest' => $baseDir . '/app/Http/Requests/UpdateArtikelRequest.php',
+
     'App\\Http\\Requests\\UpdateDetailJadwalRequest' => $baseDir . '/app/Http/Requests/UpdateDetailJadwalRequest.php',
     'App\\Http\\Requests\\UpdateDetail_diagnosisRequest' => $baseDir . '/app/Http/Requests/UpdateDetail_diagnosisRequest.php',
+
     'App\\Http\\Requests\\UpdateDetail_obatRequest' => $baseDir . '/app/Http/Requests/UpdateDetail_obatRequest.php',
     'App\\Http\\Requests\\UpdateDiagnosisRequest' => $baseDir . '/app/Http/Requests/UpdateDiagnosisRequest.php',
     'App\\Http\\Requests\\UpdateLaboratRequest' => $baseDir . '/app/Http/Requests/UpdateLaboratRequest.php',
     'App\\Http\\Requests\\UpdateObatRequest' => $baseDir . '/app/Http/Requests/UpdateObatRequest.php',
     'App\\Http\\Requests\\UpdateRekamMedisRequest' => $baseDir . '/app/Http/Requests/UpdateRekamMedisRequest.php',
     'App\\Http\\Requests\\UpdateTindakanRequest' => $baseDir . '/app/Http/Requests/UpdateTindakanRequest.php',
+    'App\\Http\\Requests\\UpdateadminRequest' => $baseDir . '/app/Http/Requests/UpdateadminRequest.php',
     'App\\Http\\Requests\\UpdateloginRequest' => $baseDir . '/app/Http/Requests/UpdateloginRequest.php',
     'App\\Http\\Requests\\UpdatereservasiRequest' => $baseDir . '/app/Http/Requests/UpdatereservasiRequest.php',
     'App\\Models\\Artikel' => $baseDir . '/app/Models/Artikel.php',
@@ -72,10 +79,14 @@ return array(
     'App\\Models\\RekamMedis' => $baseDir . '/app/Models/RekamMedis.php',
     'App\\Models\\Tindakan' => $baseDir . '/app/Models/Tindakan.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\admin' => $baseDir . '/app/Models/admin.php',
     'App\\Models\\reservasi' => $baseDir . '/app/Models/reservasi.php',
+    'App\\Policies\\AdminPolicy' => $baseDir . '/app/Policies/AdminPolicy.php',
     'App\\Policies\\ArtikelPolicy' => $baseDir . '/app/Policies/ArtikelPolicy.php',
+
     'App\\Policies\\DetailDiagnosisPolicy' => $baseDir . '/app/Policies/DetailDiagnosisPolicy.php',
     'App\\Policies\\DetailJadwalPolicy' => $baseDir . '/app/Policies/DetailJadwalPolicy.php',
+
     'App\\Policies\\DetailObatPolicy' => $baseDir . '/app/Policies/DetailObatPolicy.php',
     'App\\Policies\\DiagnosisPolicy' => $baseDir . '/app/Policies/DiagnosisPolicy.php',
     'App\\Policies\\LaboratPolicy' => $baseDir . '/app/Policies/LaboratPolicy.php',
@@ -279,8 +290,12 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+
     'Database\\Factories\\DetailDiagnosisFactory' => $baseDir . '/database/factories/DetailDiagnosisFactory.php',
     'Database\\Factories\\DetailJadwalFactory' => $baseDir . '/database/factories/DetailJadwalFactory.php',
+
+    'Database\\Factories\\AdminFactory' => $baseDir . '/database/factories/AdminFactory.php',
+
     'Database\\Factories\\DetailObatFactory' => $baseDir . '/database/factories/DetailObatFactory.php',
     'Database\\Factories\\DiagnosisFactory' => $baseDir . '/database/factories/DiagnosisFactory.php',
     'Database\\Factories\\LaboratFactory' => $baseDir . '/database/factories/LaboratFactory.php',
@@ -289,10 +304,14 @@ return array(
     'Database\\Factories\\ReservasiFactory' => $baseDir . '/database/factories/ReservasiFactory.php',
     'Database\\Factories\\TindakanFactory' => $baseDir . '/database/factories/TindakanFactory.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
+    'Database\\Seeders\\AdminSeeder' => $baseDir . '/database/seeders/AdminSeeder.php',
     'Database\\Seeders\\ArtikelSeeder' => $baseDir . '/database/seeders/ArtikelSeeder.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
+
     'Database\\Seeders\\DetailDiagnosisSeeder' => $baseDir . '/database/seeders/DetailDiagnosisSeeder.php',
     'Database\\Seeders\\DetailJadwalSeeder' => $baseDir . '/database/seeders/DetailJadwalSeeder.php',
+
+
     'Database\\Seeders\\DetailObatSeeder' => $baseDir . '/database/seeders/DetailObatSeeder.php',
     'Database\\Seeders\\DiagnosisSeeder' => $baseDir . '/database/seeders/DiagnosisSeeder.php',
     'Database\\Seeders\\DoctorScheduleSeeder' => $baseDir . '/database/seeders/DoctorScheduleSeeder.php',

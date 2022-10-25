@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('rekam_medis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->integer('sistol');
             $table->integer('diastol');
             $table->integer('TB');
