@@ -47,4 +47,9 @@ class User extends Model
     // {
     //     return $this->hasMany(DoctorSchedule::class);
     // }
+
+    public function DetailJadwal()
+    {
+        return $this->hasMany(DetailJadwal::class);
+    }
 }

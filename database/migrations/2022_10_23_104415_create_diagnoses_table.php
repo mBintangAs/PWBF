@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('Diagnosis');
             $table->string('Tipe');
-            $table->text('Keterangan');
+            $table->text('Keterangan')->nullable();
             $table->timestamps();
         });
     }

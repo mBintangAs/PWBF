@@ -13,4 +13,8 @@ class Diagnosis extends Model
         return $this->hasMany(detail_obat::class);
     }
 
+    public function detail_diagnosis(){
+        return $this->hasMany(detail_diagnosis::class);
+    }
+
 }

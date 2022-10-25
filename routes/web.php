@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\PuskesmasController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -38,4 +39,6 @@ Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
     Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
     Route::get('/input-data',[PuskesmasController::class,'InputData']);
+
+route::get('/doc',[DoctorScheduleController::class, 'index']);
 

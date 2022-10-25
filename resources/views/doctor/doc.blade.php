@@ -37,12 +37,13 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($DoctorSchedules as $DoctorSchedule)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Senin</td>
-                    <td>09.00</td>
-                    <td>13.00</td>
-                    <td>2022-10-10</td>
+                    <th>{{ $DoctorSchedule->id }}</th>
+                    <td>{{$DoctorSchedule->hari}}</td>
+                    <td>{{$DoctorSchedule->jam_masuk}}</td>
+                    <td>{{$DoctorSchedule->jam_pulang}}</td>
+                    <td>{{$DoctorSchedule->tanggal}}</td>
                     <td>
                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
                         Hapus
@@ -52,99 +53,11 @@
                       </button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Selasa</td>
-                    <td>12.00</td>
-                    <td>15.00</td>
-                    <td>2022-10-11</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Rabu</td>
-                    <td>08.00</td>
-                    <td>12.00</td>
-                    <td>2022-10-12</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Kamis</td>
-                    <td>10.00</td>
-                    <td>14.00</td>
-                    <td>2022-10-13</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Jumat</td>
-                    <td>09.00</td>
-                    <td>14.00</td>
-                    <td>2022-10-14</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Sabtu</td>
-                    <td>08.00</td>
-                    <td>13.00</td>
-                    <td>2022-10-15</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">7</th>
-                    <td>Minggu</td>
-                    <td>09.00</td>
-                    <td>12.00</td>
-                    <td>2022-10-16</td>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
-                        Hapus
-                      </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
-                        Edit
-                      </button>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
-         
+
+
 
         </div>
         <div class="card-footer">
@@ -171,5 +84,5 @@
       </div>
     </div>
   </div>
-</main><!-- End #main --> 
+</main><!-- End #main -->
 @endsection

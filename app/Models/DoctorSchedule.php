@@ -10,8 +10,8 @@ class DoctorSchedule extends Model
 {
     use HasFactory;
     protected $guarded = 'id';
-    public function user()
+    public function DetailJadwal()
     {
-        return $this->hasOne(User::class);
+        return $this->hasMany(DetailJadwal::class);
     }
 }
