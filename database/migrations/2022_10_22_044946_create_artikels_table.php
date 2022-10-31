@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('lokasi_img');
             $table->text('body');
             $table->text('excerpt');
             $table->timestamp('published_at')->nullable();

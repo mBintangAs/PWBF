@@ -14,8 +14,13 @@ class PuskesmasController extends Controller
     public function home() {
         $artikel =  DB::table('artikels')->paginate(6);
         return view('home',[
-            'artikel'=> $artikel,
+            'artikell'=> $artikel,
         ]);
+    }
+    public function lihatartikel()
+    {
+        
+        return view('lihatartikel');
     }
     public function login() {
         return view('login');

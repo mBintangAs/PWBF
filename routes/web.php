@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PuskesmasController::class, 'home']);
+Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
 
 Route::get('/login', [PuskesmasController::class, 'login']);
 
