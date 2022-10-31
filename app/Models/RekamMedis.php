@@ -12,9 +12,10 @@ class RekamMedis extends Model
 
     public function detail_diagnosis(){
         return $this->hasMany(detail_diagnosis::class);
+    }
 
-    public function user()
-    {
+    public function user(){
         return $this->belongsTo(User::class);
+
     }
 }

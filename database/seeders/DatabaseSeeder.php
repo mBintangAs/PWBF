@@ -34,12 +34,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        $DoctorSchedules = DoctorSchedule::all();
 
-        User::all()->each(function ($user) use ($DoctorSchedules){
-            $user->DoctorScheduls()->attach(
-                $DoctorSchedules->random(rand(1, 7))->pluck('id')->toArray()
-            );
-        });
     }
 }
