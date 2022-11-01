@@ -19,8 +19,11 @@ class PuskesmasController extends Controller
     }
     public function lihatartikel()
     {
-        
-        return view('lihatartikel');
+    
+        $artikel = Artikel::find(request('id'));
+        return view('lihatartikel',[
+            'artikel'=>$artikel
+        ]);
     }
     public function login() {
         return view('login');
