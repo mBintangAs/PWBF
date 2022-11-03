@@ -24,8 +24,8 @@
 
               <!-- Multi Columns Form -->
               <form class="row g-3">
-              
-                <div class="row">
+
+                <div class="row mb-3 border-bottom pb-3">
                   <div class="col">
                     <label for="inputName5" class="col-sm-3 form-label">Sistol/Diastol</label>
                     <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
@@ -41,8 +41,8 @@
                     <p class="d-inline">mm/Hg</p>
                   </div>
                 </div>
-                
-                <div class="row">
+
+                <div class="row mb-3 border-bottom pb-3">
                   <div class="col">
                     <label for="inputName5" class="col-sm-3 form-label">Denyut Nadi</label>
                     <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
@@ -55,7 +55,7 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row mb-3 border-bottom pb-3">
                   <div class="col">
                     <label for="inputName5" class="col-sm-3 form-label">Respirasi</label>
                     <input type="text" class="d-inline form-control" id="inputName5" style="width: 100px">
@@ -67,7 +67,7 @@
                     <p class="d-inline">cm</p>
                   </div>
                 </div>
-      
+
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
@@ -113,70 +113,54 @@
           <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Obat</h5>
-  
+
                 <!-- Multi Columns Form -->
                 <form class="row g-3">
-                
-                  <div class="col-md-12">
-                    <label for="inputName5" class="form-label">Nama Obat</label>
-                    <input type="text" class="form-control" id="inputName5">
-                  </div>
-                  <div class="col-md-6">
-                      <div class="d-flex justify-content-between">
-                         <div>
-                            <p class="text-dark">Total Obat</p>
-                         </div>
-                         <div class="input-group w-auto">
+
+                    <div class="row mb-3 border-bottom pb-3">
+                    <label for="inputName5" class="col-sm-2 form-label">Nama Obat</label>
+                    <input type="text" class="d-inline form-control" id="inputName5" style="width: 700px">
+                    </div>
+
+                    <div class="row mb-3 border-bottom pb-3">
+                        <label class="text-dark col-sm-3 from-label">Total Obat</label>
+                         <div class="d-inline input-group w-auto">
                             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
                             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
                             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
                          </div>
-                      </div>
-                   </div>
-                  <div class="col-md-6">
-                      <select id="inputState" class="form-select">
+                      <select id="inputState" class="d-inline form-select" style="width: 300px">
                         <option value="1">Botol</option>
                         <option value="2">Butir</option>
                       </select>
                     </div>
-                    <div class="col-md-6">
-                      <div class="d-flex justify-content-between">
-                         <div>
-                            <p class="text-dark">Aturan Pakai</p>
-                         </div>
-                         <div class="input-group w-auto">
+
+                  <div class="row mb-3 border-bottom pb-3">
+                    <label class="text-dark col-sm-3 from-label">Aturan Pakai</label>
+                     <div class="d-inline input-group w-auto">
+                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                        <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
+                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
+                        <p class="d-inline">Kali Sehari</p>
+                     </div>
+                    </div>
+
+                    <div class="row mb-3 border-bottom pb-3">
+                         <label class="text-dark col-sm-3 from-label">Anjuran Meminum Obat</label>
+                         <div class="d-inline input-group w-auto">
                             <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
                             <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
                             <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
                          </div>
-                      </div>
+                         <select id="inputState" class="form-select" style="width: 300px">
+                            <option selected>Jenis Obat</option>
+                            <option value="1">Tablet</option>
+                            <option value="2">Kaplet</option>
+                            <option value="3">Bungkus</option>
+                            <option value="4">Sendok Makan</option>
+                            <option value="5">Sendok Teh</option>
+                          </select>
                    </div>
-                  <div class="col-md-6">
-                      <p>  </p>
-                      <p>Kali Sehari</p>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="d-flex justify-content-between">
-                         <div>
-                            <p class="text-dark">Anjuran Meminum Obat</p>
-                         </div>
-                         <div class="input-group w-auto">
-                            <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
-                            <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
-                            <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
-                         </div>
-                      </div>
-                   </div>
-                  <div class="col-md-6">
-                      <select id="inputState" class="form-select">
-                        <option selected>Jenis Obat</option>
-                        <option value="1">Tablet</option>
-                        <option value="2">Kaplet</option>
-                        <option value="3">Bungkus</option>
-                        <option value="4">Sendok Makan</option>
-                        <option value="5">Sendok Teh</option>
-                      </select>
-                    </div>
                   <fieldset class="row mb-3">
                 <legend class="col-form-label col-sm-2 pt-0">Waktu Konsumsi</legend>
                 <div class="col-sm-10">
@@ -235,7 +219,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Tindakan</h5>
-  
+
                 <!-- General Form Elements -->
                 <form>
                   <div class="row mb-3">
@@ -260,16 +244,16 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
                   </div>
-  
+
                 </form><!-- End General Form Elements -->
-  
+
               </div>
             </div>
 
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Laborat</h5>
-  
+
                 <!-- General Form Elements -->
                 <form>
                   <div class="row mb-3">
@@ -293,9 +277,9 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
                   </div>
-  
+
                 </form><!-- End General Form Elements -->
-  
+
               </div>
             </div>
 

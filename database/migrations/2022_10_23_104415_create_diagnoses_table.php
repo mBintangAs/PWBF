@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('diagnoses', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('diagnoses_id');
             $table->string('Diagnosis');
             $table->string('Tipe');
             $table->text('Keterangan')->nullable();
