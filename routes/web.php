@@ -16,16 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PuskesmasController::class, 'home']);
+Route::get('/', [PuskesmasController::class, 'home'])->name('home');
 Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
 
 Route::get('/login', [PuskesmasController::class, 'login']);
+Route::post('/login', [PuskesmasController::class, 'login']);
 
 Route::get('/register', [PuskesmasController::class, 'register']);
 Route::post('/register2', [userController::class, "register"]);
 
-Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('guest')->name('login-doctor');
-Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
+Route::get('/doclogin', [PuskesmasController::class, 'doclogin']);
+Route::get('/adlogin', [PuskesmasController::class, 'adlogin']);
 route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
 Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 
