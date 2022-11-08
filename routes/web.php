@@ -29,8 +29,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('guest')->name('login-doctor');
-Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
+Route::get('/doclogin', [PuskesmasController::class, 'doclogin']);
+Route::get('/adlogin', [PuskesmasController::class, 'adlogin']);
 route::post('/adlogin',[PuskesmasController::class, 'adloginpost']);
 Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 

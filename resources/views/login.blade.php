@@ -40,15 +40,10 @@
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Have an account?</h3>
 		      	<form action="/login" method="post" class="signin-form">
-                    @csrf
-                    <div class="form-group">
-                        <input type="email" name="email" id=email class="form-control @error('email') is-invalid @enderror" placeholder="Email" autofocus required value="{{ old('email') }}">
-                        @error('email')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
+					@csrf
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Username" required>
+		      		</div>
 	            <div class="form-group">
 	              <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>
 	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
