@@ -1,28 +1,42 @@
 <?php
 
 namespace App\Models;
-use app\Models\RekamMedis;
 
+// use App\Models\User;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\RekamMedis;
+use App\Models\DetailJadwal;
+use App\Models\DoctorSchedule;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
-{
-    use HasApiTokens, HasFactory, Notifiable;
+class User extends Authenticatable{
+    use HasFactory;
 
-    protected $fillable=[
-        'username',
-        'email',
-        'password'
-    ];
-    public function RekamMedis()
-    {
-        return $this->hasMany(RekamMedis::class);
-    }
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
+
+    protected $fillable=['nama', 'email', 'password'];
+}
+
+
+
+// class User extends Model
+// {
+//     use HasApiTokens, HasFactory, Notifiable;
+
+//     protected $fillable=[
+//         'username',
+//         'email',
+//         'password'
+//     ];
+//     public function RekamMedis()
+//     {
+//         return $this->hasMany(RekamMedis::class);
+//     }
     // /**
     //  * The attributes that are mass assignable.
     //  *
@@ -53,8 +67,8 @@ class User extends Model
     //     return $this->hasMany(DoctorSchedule::class);
     // }
 
-    public function DetailJadwal()
-    {
-        return $this->hasMany(DetailJadwal::class);
-    }
-}
+//     public function DetailJadwal()
+//     {
+//         return $this->hasMany(DetailJadwal::class);
+//     }
+// }

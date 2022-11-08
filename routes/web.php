@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\DoctorScheduleController;
-use App\Http\Controllers\PuskesmasController;
-use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PuskesmasController;
+use App\Http\Controllers\DoctorScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PuskesmasController::class, 'home']);
+Route::get('/', [HomeController::class, 'home']);
 Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
 
-Route::get('/login', [PuskesmasController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [PuskesmasController::class, 'register']);
-Route::post('/register2', [userController::class, "register"]);
+Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/doclogin', [PuskesmasController::class, 'doclogin'])->middleware('guest')->name('login-doctor');
 Route::get('/adlogin', [PuskesmasController::class, 'adlogin'])->middleware('guest')->name('login-admin');
