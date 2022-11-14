@@ -17,11 +17,17 @@ class UserSeeder extends Seeder
     {
         //
         User::create([
-            'email'=>'patient@admin.com',
+            'email'=>'admin@admin.com',
             'password'=> bcrypt('123456'),
             'username'=> 'shab'
 
         ]);
+        // User::create([
+        //     'email'=>'patient@admin.com',
+        //     'password'=> bcrypt('123456'),
+        //     'username'=> 'shab'
+
+        // ]);
         // User::create([
         //     'name'=>'patient',
         //     'email'=>'patient@patient.com',

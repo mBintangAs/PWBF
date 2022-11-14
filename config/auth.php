@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\User;
+use App\Models\admin;
+use App\Models\dokter;
+
 return [
 
     /*
@@ -37,8 +41,21 @@ return [
 
     'guards' => [
         'web' => [
+                'driver' => 'session',
+                'provider' => 'users',
+            ],
+    
+        'user' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'dokter' => [
+            'driver' => 'session',
+            'provider' => 'dokters',
+        ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
         ],
     ],
 
@@ -62,7 +79,15 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => User::class,
+        ],
+        'dokters' => [
+            'driver' => 'eloquent',
+            'model' => dokter::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => admin::class,
         ],
 
         // 'users' => [

@@ -126,7 +126,7 @@
                           <!-- Dropdown - User Information -->
                           {{-- <form method="POST" action="/adlogin" class="row g-3 needs-validation" novalidate> --}}
                             {{-- <input type="hidden" name="_token" value="rLysDUPbH0bDhVVZ1vQYxq2uDxZ5jlZmnAq0UmJ1">                <button class="btn" type="submit"> --}}
-                              <a href="/adlogin" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i>
+                              <a href="/logout" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i>
                               <span>Sign Out</span></a>
                             </button>
                           </form>

@@ -91,7 +91,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <a href='/ad'class="btn btn-primary w-100" type="submit">Login</a>
+                      <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="/docregister">Create an account</a></p>

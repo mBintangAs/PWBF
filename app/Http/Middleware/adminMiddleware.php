@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CekLevelad
+class adminMiddleware
 {
     /**
      * Handle an incoming request.
@@ -14,12 +14,11 @@ class CekLevelad
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, ...$levels)
+    public function handle(Request $request, Closure $next)
     {
-        if (in_array($request->user()->level,$levels)) {
-            # code...
-            return $next($request);
+        if(!auth()->guard('admin')->check()){
+            return redirect('/adlogin');
         }
-        return redirect('/adlogin');
+        return $next($request);
     }
 }

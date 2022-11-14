@@ -87,7 +87,7 @@ class PuskesmasController extends Controller
     public function adloginpost (Request $request) {
         $email = $request['email'];
         $password = $request['password'];
-        if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 1))) {
+        if (Auth::guard('admin')->attempt(['email' => $email, 'password' => $password])) {
             $request->session()->regenerate();
             return redirect('/ad');
         }
@@ -113,4 +113,22 @@ class PuskesmasController extends Controller
     public function docregister (){
         return view('doctor/docregister');
     }
+    public function logout()
+    {
+        if(Auth::guard('user')->check()){
+            Auth::guard('user')->logout();
+            session()->invalidate();
+        session()->regenerateToken();
+        return redirect('/');
+        }elseif(Auth::guard('admin')->check()){
+            Auth::guard('admin')->logout();
+            session()->invalidate();
+        session()->regenerateToken();
+        return redirect('/adlogin');
+        }
+       
+        
+
+    }
+
 }
