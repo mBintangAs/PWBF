@@ -42,10 +42,8 @@ Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
     Route::get('/doc', [PuskesmasController::class, 'doc']);
     route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
     Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
-    Route::get('/formad',[PuskesmasController::class,'Formad']);
 
 route::get('/doc',[DoctorScheduleController::class, 'index']);
-
 route::get('/logout',[PuskesmasController::class,'logout']);
 Route::group(['middleware'=>'authAdmin'],function ()
 {
