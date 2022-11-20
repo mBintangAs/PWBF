@@ -19,28 +19,28 @@
                        @if(Auth::guard('user')->check())
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Selamat datang,
+                                Selamat datang,
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="/">Dashboard</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li>
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
+                                <li><a class="dropdown-item" href="/">Dashboard</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
 
-                            </ul>
-                          </li>
-                        @else
-                        <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        @endif
+                                </ul>
+                            </li>
+                            @else
+                            <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            @endif
 
 
-                    </ul>
+                        </ul>
                 </div>
             </div>
         </nav>

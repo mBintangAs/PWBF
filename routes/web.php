@@ -24,7 +24,7 @@ Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
 
 Route::get('/login', [LoginController::class, 'login'])->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::any('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -37,9 +37,7 @@ Route::post('/doclogin', [PuskesmasController::class, 'docloginpost']);
 
 Route::get('/docregister', [PuskesmasController::class, 'docregister']);
 Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
-    Route::get('/docrm', [PuskesmasController::class, 'docrm']);
     Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
-    Route::get('/doc', [PuskesmasController::class, 'doc']);
     route::post('/doclogout',[ PuskesmasController::class, 'logoutdoctor']);
     Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
 
@@ -53,3 +51,9 @@ Route::group(['middleware'=>'authAdmin'],function ()
     Route::get('/adartikel', [PuskesmasController::class, 'adartikel']);
 });
 
+Route::group(['middleware'=>'authDokter'],function ()
+{
+    Route::get('/doc', [PuskesmasController::class, 'doc']);
+
+Route::get('/docrm', [PuskesmasController::class, 'docrm']);
+});

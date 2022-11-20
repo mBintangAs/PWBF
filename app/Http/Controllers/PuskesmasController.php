@@ -19,7 +19,7 @@ class PuskesmasController extends Controller
     }
     public function lihatartikel()
     {
-    
+
         $artikel = Artikel::find(request('id'));
         return view('lihatartikel',[
             'artikel'=>$artikel
@@ -38,7 +38,7 @@ class PuskesmasController extends Controller
         return view('doctor/doc');
     }
 
-    
+
     public function docprofile() {
         return view('doctor/docprofile');
     }
@@ -46,7 +46,7 @@ class PuskesmasController extends Controller
     public function adartikel() {
         return view('admin/adartikel');
     }
-    
+
     public function docrm() {
         return view('doctor/docrm');
     }
@@ -57,17 +57,17 @@ class PuskesmasController extends Controller
     }
 
     public function doclogin () {
-        
+
         return view('doctor/doclogin');
     }
 
     public function docrmform () {
-        
+
         return view('doctor/docrmform');
     }
 
     public function adlogin () {
-        
+
         return view('admin/adlogin');
     }
   public function ad()
@@ -96,7 +96,7 @@ class PuskesmasController extends Controller
     public function docloginpost (Request $request) {
         $email = $request['email'];
         $password = $request['password'];
-        if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
+        if (Auth::guard('dokter')->attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
             $request->session()->regenerate();
             return redirect('/doc');
         }
@@ -126,8 +126,8 @@ class PuskesmasController extends Controller
         session()->regenerateToken();
         return redirect('/adlogin');
         }
-       
-        
+
+
 
     }
 
