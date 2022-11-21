@@ -17,11 +17,23 @@ class LoginController extends Controller
             'email'=>'required|email',
             'password'=>'required'
         ]);
+        $email = $request->email;
+        $password = $request->password;
 
-        if (Auth::attempt($credentials)){
+        // if (Auth::attempt($credentials)){
+        //     $request->session()->regenerate();
+        //     return redirect()->intended('/')->with('success', 'berhasil');
+        // }
+        if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 0))) {
             $request->session()->regenerate();
-            return redirect()->intended('/')->with('success', 'berhasil');
-        }
+            return redirect('/ad');
+        }else if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 1))) {
+            $request->session()->regenerate();
+            return redirect('/doc');}
+        // }else if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
+        //     $request->session()->regenerate();
+        //     return redirect('/dashboard-dokter');
+        // }
 
         return back()->with('error', 'Email atau password salah');
     }

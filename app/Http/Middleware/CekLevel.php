@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CekLevel
 {
@@ -16,10 +17,18 @@ class CekLevel
      */
     public function handle(Request $request, Closure $next, ...$levels)
     {
-        if (in_array($request->user()->level,$levels)) {
+        //jika level user yang masuk tidak sesuai dengan level yang di harapkan dari variabel $level maka tidak bisa masuk
+
+        if (in_array(Auth::user()->level,$levels)) {
             # code...
             return $next($request);
         }
-        return redirect('/');
+        if(Auth::user()->level == 0){
+            return redirect('/ad');
+        }
+        if(Auth::user()->level == 1){
+            return redirect('/doc');
+        }
+       
     }
 }

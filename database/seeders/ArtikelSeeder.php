@@ -10,7 +10,7 @@ class ArtikelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
+     *c
      * @return void
      */
     public function run()

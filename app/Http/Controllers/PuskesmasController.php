@@ -11,12 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PuskesmasController extends Controller
 {
-    public function home() {
-        $artikel =  DB::table('artikels')->paginate(6);
-        return view('home',[
-            'artikell'=> $artikel,
-        ]);
-    }
+    
     public function lihatartikel()
     {
 
@@ -84,51 +79,9 @@ class PuskesmasController extends Controller
         "RekamMedis"=>$RekamMedis
     ]);
   }
-    public function adloginpost (Request $request) {
-        $email = $request['email'];
-        $password = $request['password'];
-        if (Auth::guard('admin')->attempt(['email' => $email, 'password' => $password])) {
-            $request->session()->regenerate();
-            return redirect('/ad');
-        }
-        return back()->with('salah', 'Silahkan cek kembali email atau password anda')->with('email', $email);
-    }
-    public function docloginpost (Request $request) {
-        $email = $request['email'];
-        $password = $request['password'];
-        if (Auth::guard('dokter')->attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
-            $request->session()->regenerate();
-            return redirect('/doc');
-        }
-        return back()->with('salah', 'Silahkan cek kembali email atau password anda')->with('email', $email);
-    }
-
-    public function logoutdoctor(Request $req)
-    {
-        Auth::logout();
-        $req->session()->invalidate();
-        $req->session()->regenerateToken();
-        return redirect()->route('login-doctor');
-    }
+   
     public function docregister (){
         return view('doctor/docregister');
     }
-    public function logout()
-    {
-        if(Auth::guard('user')->check()){
-            Auth::guard('user')->logout();
-            session()->invalidate();
-        session()->regenerateToken();
-        return redirect('/');
-        }elseif(Auth::guard('admin')->check()){
-            Auth::guard('admin')->logout();
-            session()->invalidate();
-        session()->regenerateToken();
-        return redirect('/adlogin');
-        }
-
-
-
-    }
-
+    
 }

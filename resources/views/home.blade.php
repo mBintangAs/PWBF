@@ -16,7 +16,8 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                       @if(Auth::guard('user')->check())
+                        @auth
+                       @if(Auth()->user()->level == 2)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Selamat datang,
@@ -32,14 +33,36 @@
 
                                 </ul>
                             </li>
-                            @else
+                            @endif
+                       @if(Auth()->user()->level == 0)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Selamat datang
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/ad">Dashboard</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+
+                                </ul>
+                            </li>
+                            @endif
                             <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
                             <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                            @endif
-
-
+                            @endauth
+                            {{-- @if(!Auth::check())
+                            <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            @endif --}}
+                            
                         </ul>
                 </div>
             </div>
@@ -103,7 +126,7 @@
                     <h2 class="section-heading text-uppercase">Artikel Kesehatan</h2>
                     <h3 class="section-subheading text-muted">Artikel Terpopuler</h3>
                 </div>
-                {{-- <div class="row">
+                <div class="row">
                     @foreach($artikel as $item)
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
@@ -125,7 +148,7 @@
 
                 {{-- <div class="text-center col-md-5">
                     {{$artikell->links()}}
-                </div> --}}
+                </div>
 
         </section>
 
