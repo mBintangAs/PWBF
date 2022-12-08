@@ -8,6 +8,7 @@ use App\Models\DoctorSchedule;
 use App\Models\RekamMedis;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\DiagnosisSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,8 +21,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RekamMedisSeeder::class,
-            DiagnosisSeeder::class,
+            DiagnosesSeeder::class,
             UserSeeder::class,
+            ArtikelSeeder::class,
             DoctorScheduleSeeder::class
         ]);
 

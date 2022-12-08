@@ -23,23 +23,24 @@
               <h5 class="card-title">General Form Elements</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form action="/schedule" method="post">
+                @csrf
                 <div class="row mb-3">
                   <label for="inputDate" class="col-sm-2 col-form-label">Tanggal</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" name="tanggal">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputTime" class="col-sm-2 col-form-label">Jam</label>
                   <div class="col-sm-10">
-                    <input type="time" class="form-control">
+                    <input type="time" class="form-control" name="jam_masuk">
                   </div>
                 </div>
                 <div class="row mb-3">
                     <label for="inputTime" class="col-sm-2 col-form-label">Sampai Dengan</label>
                     <div class="col-sm-10">
-                      <input type="time" class="form-control">
+                      <input type="time" class="form-control" name="jam_pulang">
                     </div>
                   </div>
 

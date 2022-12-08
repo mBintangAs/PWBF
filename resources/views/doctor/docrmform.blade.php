@@ -79,6 +79,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Diagnosis</h5>
+              <button type="submit" class="btn btn-primary">Tambah</button>
 
               <!-- General Form Elements -->
               <form>
@@ -113,6 +114,7 @@
           <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Obat</h5>
+                <button type="submit" class="btn btn-primary">Tambah</button>
 
                 <!-- Multi Columns Form -->
                 <form class="row g-3">
@@ -219,6 +221,9 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Tindakan</h5>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+
+
 
                 <!-- General Form Elements -->
                 <form>
@@ -253,6 +258,8 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Laborat</h5>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+
 
                 <!-- General Form Elements -->
                 <form>

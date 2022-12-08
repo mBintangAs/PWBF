@@ -45,9 +45,15 @@
                     <td>{{$DoctorSchedule->jam_pulang}}</td>
                     <td>{{$DoctorSchedule->tanggal}}</td>
                     <td>
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
+                      <form action="/schedule/{{ $DoctorSchedule->id }}" method="post" style="display: inline">
+                        @csrf
+                        @method('delete')
+                        <input type="hidden" name="id" value="{{  $DoctorSchedule->id  }}">
+                        <button type="submit" class="btn btn-danger">Hapus</button>
+                      </form>
+                      {{-- <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#basicModal">
                         Hapus
-                      </button>
+                      </button> --}}
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
                         Edit
                       </button>

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class DoctorSchedule extends Model
 {
     use HasFactory;
-    protected $guarded = 'id';
+    protected $guarded = ['id'];
     public function DetailJadwal()
     {
         return $this->hasMany(DetailJadwal::class);

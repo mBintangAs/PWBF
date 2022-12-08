@@ -62,7 +62,7 @@
                             <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                             @endif --}}
-                            
+
                         </ul>
                 </div>
             </div>
@@ -128,6 +128,40 @@
                 </div>
                 <div class="row">
                     @foreach($artikel as $item)
+
+                    <div class="portfolio-modal modal fade" id="portfolioModal{{$item->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <div class="modal-body">
+                                                <!-- Project details-->
+                                                <h2 class="text-uppercase">{{$item->title}}</h2>
+                                                <img class="img-fluid d-block mx-auto" src="{{$item->lokasi_img}}" alt="..." />
+                                                <p>{{$item->body}}</p>
+                                                <ul class="list-inline">
+                                                </ul>
+                                                <form action="/lihat-artikel" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{$item->id}}">
+                                                    <button type="submit" class="btn btn-primary btn-xl text-uppercase">
+                                                        <i class=""></i>
+                                                        Baca
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="row">
+                    @foreach($artikel as $item)
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
@@ -144,10 +178,11 @@
                         </div>
                     </div>
                    @endforeach
-            </div> --}}
+                </div>
+            </div>
 
-                {{-- <div class="text-center col-md-5">
-                    {{$artikell->links()}}
+                 <div class="text-center col-md-5">
+                    {{$artikel->links()}}
                 </div>
 
         </section>
@@ -156,7 +191,7 @@
 
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
-        {{-- @foreach($artikell as $item)
+       @foreach($artikel as $item)
         <div class="portfolio-modal modal fade" id="portfolioModal{{$item->id}}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -186,7 +221,7 @@
                 </div>
             </div>
         </div>
-        @endforeach --}}
+        @endforeach
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

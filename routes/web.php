@@ -7,6 +7,8 @@
     use App\Http\Controllers\RegisterController;
     use App\Http\Controllers\PuskesmasController;
     use App\Http\Controllers\DoctorScheduleController;
+use App\Http\Controllers\ScheduleController;
+use App\Models\DoctorSchedule;
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +30,7 @@
     Route::post('/register', [RegisterController::class, 'store']);
     Route::get('/docregister', [PuskesmasController::class, 'docregister']);
     route::get('/logout',[LoginController::class,'logout']);
-    // 0 admin 
+    // 0 admin
     Route::group(['middleware'=>['auth','cekLevel:0']],function ()
     {
         route::get('/ad',[PuskesmasController::class, 'ad']);
@@ -46,3 +48,5 @@
         Route::get('/docrm', [PuskesmasController::class, 'docrm']);
     });
     // 2 pasien
+
+    Route::resource('/schedule', ScheduleController::class);
