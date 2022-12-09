@@ -9,7 +9,7 @@
           <a class="sidebar-brand d-flex align-items-center justify-content-center">
               <div class="sidebar-brand-icon">
                 {{-- logo taruh sini --}}
-                  <img src="img/logo.png" alt="" width="40">
+                  {{-- <img src="img/logo.png" alt="" width="40"> --}}
               </div>
               <div class="sidebar-brand-text mx-3">ISHEC</div>
           </a>
@@ -32,6 +32,11 @@
               <a class="nav-link" href="/rekam-medis">
                   <i class="fa-solid fa-notes-medical"></i>
                   <span>Rekam Medis</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/profile">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Profile</span></a>
           </li>
       
 

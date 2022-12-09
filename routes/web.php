@@ -22,6 +22,7 @@ use App\Models\DoctorSchedule;
     */
 
     Route::get('/', [HomeController::class, 'home']);
+    Route::post('/', [HomeController::class, 'findjadwal']);
     Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
     Route::get('/login', [LoginController::class, 'login'])->middleware('guest')->name('login');
     Route::post('/login', [LoginController::class, 'authenticate']);
@@ -31,11 +32,15 @@ use App\Models\DoctorSchedule;
     Route::get('/docregister', [PuskesmasController::class, 'docregister']);
     route::get('/logout',[LoginController::class,'logout']);
     // 0 admin
+    Route::get('/profile',[PuskesmasController::class,'profile'])->middleware('auth');
+    Route::post('/profile',[PuskesmasController::class,'profilepost'])->middleware('auth');
     Route::group(['middleware'=>['auth','cekLevel:0']],function ()
     {
         route::get('/ad',[PuskesmasController::class, 'ad']);
         Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
+        Route::post('/rekam-medis',[PuskesmasController::class,'rekammedisfind']);
         Route::get('/input-data',[PuskesmasController::class,'InputData']);
+        Route::post('/input-data',[PuskesmasController::class,'InputDatafind']);
         Route::get('/adartikel', [PuskesmasController::class, 'adartikel']);
     });
     // 1 dokter
@@ -48,5 +53,8 @@ use App\Models\DoctorSchedule;
         Route::get('/docrm', [PuskesmasController::class, 'docrm']);
     });
     // 2 pasien
+    Route::group(['middleware'=>['auth','cekLevel:2']],function ()
+    {
 
+    });
     Route::resource('/schedule', ScheduleController::class);

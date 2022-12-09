@@ -19,9 +19,13 @@ return new class extends Migration
             $table->string('password');
             $table->string('nama');
             $table->string('alamat');
-            $table->date('nama');
+            $table->date('tanggal_lahir');
             //kolom level 
             $table->integer('level');
+            $table->string('jenis_kelamin');
+            $table->string('no_telepon');
+            $table->string('SIP')->nullable();
+            $table->string('spesialis')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

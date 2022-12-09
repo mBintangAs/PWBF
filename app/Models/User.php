@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use App\Models\User;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\reservasi;
 use App\Models\RekamMedis;
 use App\Models\DetailJadwal;
 use App\Models\DoctorSchedule;
@@ -20,6 +21,24 @@ class User extends Authenticatable{
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
     // protected $fillable=['nama', 'email', 'password'];
+    /**
+     * Get all of the reservasi for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservasi(): HasMany
+    {
+        return $this->hasMany(reservasi::class);
+    }
+    /**
+     * Get all of the rekammedis for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rekammedis(): HasMany
+    {
+        return $this->hasMany(RekamMedis::class);
+    }
 }
 
 

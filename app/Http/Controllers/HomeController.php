@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use Illuminate\Http\Request;
+use App\Models\DoctorSchedule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,5 +23,15 @@ class HomeController extends Controller
         return view('home',[
             'artikel'=> $artikel,
         ]);
+       
+    }
+    public function findjadwal()
+    {
+        $jadwalFind = DoctorSchedule::where('tanggal',request('date'))->count();
+        if($jadwalFind>0){
+            return back()->with('found','Jadwal ditemukan');
+        }else{
+            return back()->with('notfound','Jadwal tidak ditemukan');
+        }
     }
 }

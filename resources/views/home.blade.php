@@ -102,15 +102,16 @@
                     <h2 class="section-heading text-uppercase">Pendaftaran Pasien</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
-                <form action="">
-                <div class="row">
-                    <div class="col-md-5">
-                        <label for="inputDate" class="form-label"style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
+                <form action="" method="POST">
+                    @csrf
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <label for="inputDate" class="form-label "style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
                         <div class="col-sm-15">
-                          <input type="date" class="form-control"style="border-radius: 30px">
+                          <input type="date" name="date" class="form-control"style="border-radius: 30px">
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    {{-- <div class="col-md-5">
                         <div class="form-group">
                             <span class="form-label" style="font-family: Verdana, Geneva, Tahoma, sans-serif">POLI KLINIK</span>
                             <select class="form-control" style="border-radius: 30px">
@@ -125,7 +126,7 @@
                             </select>
                             <span class="select-arrow"></span>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-md-2">
                         <div class="form-btn">
                             <button class="submit-btn btn btn-warning mt-4" type="submit">Cari</button>
@@ -239,6 +240,19 @@
             </div>
         </div>
         @endforeach
+        @if (session()->has('found'))
+            <script>
+                alert('{{ session('found') }}')
+                if (confirm('apakah anda ingin membuat reservasi')) {
+                    window.location.href = '/reservasi';
+                }
+            </script>            
+        @endif
+        @if (session()->has('notfound'))
+            <script>
+                alert('{{ session('notfound') }}')
+            </script>            
+        @endif
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

@@ -40,7 +40,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">Jadwal Kontrol Pasien</h4>
-               <label for="exampleInputPassword4">POLI</label>
+               {{-- <label for="exampleInputPassword4">POLI</label>
               <select class="form-control">
                 <option>Umum</option>
                 <option>Gigi</option>
@@ -50,48 +50,34 @@
                 <option>Gizi</option>
                 <option>Batra</option>
                 <option>Anak</option>
-            </select>
+            </select> --}}
         
                 <table class="table table-hover">
                   <thead>
                     <tr>
                       <th>PASIEN</th>
-                      <th>JAM</th>
-                      <th>HARI/TANGGAL</th>
+                      <th>Hari</th>
+                      <th>TANGGAL</th>
                       <th>Status</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($jadwalpasien as $item)
                     <tr>
-                      <td>Jacob</td>
-                      <td>10.00</td>
-                      <td class="text-danger"> 16 May 2019 <i class="mdi mdi-arrow-down"></i></td>
-                      <td><label class="badge badge-danger">Pending</label></td>
+                      <td>{{ ucfirst($item->user->nama) }}</td>
+                      <td>{{ Date('D',strtotime($item->tgl_hadir)) }}</td>
+                      <td > {{ Date('d M Y',strtotime($item->tgl_hadir))}}</td>
+                      @if (strtolower($item->status_reservasi) == 'hadir')
+                      <td><label class="badge badge-success">{{ ucfirst( $item->status_reservasi) }}</label></td>
+                      @endif
+                      @if (strtolower($item->status_reservasi) == 'tidak hadir')
+                      <td><label class="badge badge-danger">{{ ucfirst( $item->status_reservasi) }}</label></td>
+                      @endif
+                      @if(strtolower($item->status_reservasi) == 'belum hadir')
+                      <td><label class="badge badge-primary">{{ ucfirst( $item->status_reservasi) }}</label></td>
+                      @endif
                     </tr>
-                    <tr>
-                      <td>Messsy</td>
-                      <td>11.00</td>
-                      <td class="text-danger"> 17 May 2019<i class="mdi mdi-arrow-down"></i></td>
-                      <td><label class="badge badge-warning">In progress</label></td>
-                    </tr>
-                    <tr>
-                      <td>John</td>
-                      <td>12.00</td>
-                      <td class="text-danger"> 18 May 2019 <i class="mdi mdi-arrow-down"></i></td>
-                      <td><label class="badge badge-info">Fixed</label></td>
-                    </tr>
-                    <tr>
-                      <td>Peter</td>
-                      <td>13.00</td>
-                      <td class="text-success">19 May 2019 <i class="mdi mdi-arrow-up"></i></td>
-                      <td><label class="badge badge-success">Completed</label></td>
-                    </tr>
-                    <tr>
-                      <td>Dave</td>
-                      <td>14.00 </td>
-                      <td class="text-success"> 20 May 2019 <i class="mdi mdi-arrow-up"></i></td>
-                      <td><label class="badge badge-warning">In progress</label></td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
