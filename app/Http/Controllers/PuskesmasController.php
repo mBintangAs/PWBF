@@ -67,10 +67,16 @@ class PuskesmasController extends Controller
     }
   public function ad()
   {
-    return view('admin/addash');
+    $date = date('Y-m-d');
+    $dateplus7 = date('Y-m-d', strtotime('+7 day', strtotime($date)));
+    $jadwalDokter = DoctorSchedule::whereBetween('tanggal',[$date, $dateplus7])->orderBy('tanggal', 'desc')->get();
+
+    return view('admin.addash',[
+        'jadwaldokter'=>$jadwalDokter
+    ]);
   }
   public function InputData (){
-    return view('admin/adinputdata');
+    return view('admin.adinputdata');
   }
   public function rekammedis()
   {

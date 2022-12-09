@@ -30,12 +30,12 @@ class LoginController extends Controller
         }else if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 1))) {
             $request->session()->regenerate();
             return redirect('/doc');}
-        // }else if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
-        //     $request->session()->regenerate();
-        //     return redirect('/dashboard-dokter');
-        // }
+        else if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 2))) {
+            $request->session()->regenerate();
+            return redirect('/');
+        }
 
-        return back()->with('error', 'Email atau password salah');
+        return back()->with('error', 'Email atau password salah')->with('email',$email);
     }
 
     public function logout(Request $request){

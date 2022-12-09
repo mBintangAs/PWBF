@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISHEC</title>
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -16,11 +14,11 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        @auth
-                       @if(Auth()->user()->level == 2)
+                       @auth
+                       @if(Auth::user()->level == 2)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Selamat datang,
+                                Selamat datang {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/">Dashboard</a></li>
@@ -34,12 +32,12 @@
                                 </ul>
                             </li>
                             @endif
-                       @if(Auth()->user()->level == 0)
+                       @if(Auth::user()->level == 0)
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Selamat datang
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                                 <li><a class="dropdown-item" href="/ad">Dashboard</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
@@ -51,11 +49,30 @@
                                 </ul>
                             </li>
                             @endif
+                       @if(Auth::user()->level == 1)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Selamat datang
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <li><a class="dropdown-item" href="/doc">Dashboard</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+
+                                </ul>
+                            </li>
+                            @endauth
+                            @else
                             <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>
                             <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                            @endauth
+                            @endif
+                          
                             {{-- @if(!Auth::check())
                             <li class="nav-item"><a class="nav-link" href="#services">Pendaftaran Pasien</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Artikel Kesehatan</a></li>

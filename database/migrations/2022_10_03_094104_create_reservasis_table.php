@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('reservasis', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_pasien');
             $table->date('tgl_reservasi');
             $table->date('tgl_hadir');
             $table->string('status_reservasi');

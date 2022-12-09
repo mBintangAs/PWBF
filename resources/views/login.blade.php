@@ -24,19 +24,15 @@
 				<div class="col-md-6 col-lg-4">
 
                     @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
+						<script type="text/javascript">
+							alert('{{ session('success') }}')
+						</script>
                     @endif
 
                     @if (session()->has('error'))
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ session('error') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                      </div>
+					<script type="text/javascript">
+						alert('{{ session('error') }}')
+					</script>
                     @endif
 
 					<div class="login-wrap p-0">
@@ -44,7 +40,7 @@
 		      	<form action="/login" method="post" class="signin-form">
                     @csrf
 		      		<div class="form-group">
-		      			<input type="text" name="email" class="form-control" placeholder="Email" required>
+		      			<input type="text" value="{{ session('email') }}" name="email" class="form-control" placeholder="Email" required>
 		      		</div>
 	            <div class="form-group">
 	              <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>

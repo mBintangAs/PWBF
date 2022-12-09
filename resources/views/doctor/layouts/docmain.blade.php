@@ -82,7 +82,7 @@
             </li>
 
             <li>
-              <form class="dropdown-item d-flex align-items-center" method="POST" action="/doclogout">
+              <form class="dropdown-item d-flex align-items-center" method="POST" action="/logout">
                 @csrf
                 <button class="btn" type="submit">
                   <i class="bi bi-box-arrow-right"></i>

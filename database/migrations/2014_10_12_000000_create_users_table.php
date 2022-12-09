@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('nama');
+            $table->string('alamat');
+            $table->date('nama');
             //kolom level 
             $table->integer('level');
             $table->rememberToken();

@@ -16,7 +16,7 @@
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
 
           <div class="card">
             <div class="card-body">
@@ -26,20 +26,20 @@
               <form action="/schedule" method="post">
                 @csrf
                 <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-2 col-form-label">Tanggal</label>
-                  <div class="col-sm-10">
+                  <label for="inputDate" class="col-sm-4 col-form-label">Tanggal</label>
+                  <div class="col-sm-8">
                     <input type="date" class="form-control" name="tanggal">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputTime" class="col-sm-2 col-form-label">Jam</label>
-                  <div class="col-sm-10">
+                  <label for="inputTime" class="col-sm-4 col-form-label">Jam</label>
+                  <div class="col-sm-8">
                     <input type="time" class="form-control" name="jam_masuk">
                   </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputTime" class="col-sm-2 col-form-label">Sampai Dengan</label>
-                    <div class="col-sm-10">
+                    <label for="inputTime" class="col-sm-4 col-form-label">Sampai Dengan</label>
+                    <div class="col-sm-8">
                       <input type="time" class="form-control" name="jam_pulang">
                     </div>
                   </div>
